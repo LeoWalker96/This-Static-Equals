@@ -1,0 +1,34 @@
+
+import javax.swing.JOptionPane;
+public class CarDriver {
+        public static void main(String[] args) {
+                System.out.println("Number of car(s): " + Car.getCount());
+
+                String color = JOptionPane.showInputDialog(null, "Enter color of my car");
+                int horsePower = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter horse power of my car"));
+                double engineSize = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter engine size of my car"));
+                String make = JOptionPane.showInputDialog(null, "Enter make of my car");
+                Car myCar = new Car(color, horsePower, engineSize, make);
+
+                String color1 = JOptionPane.showInputDialog(null, "Enter color of his car");
+                int horsePower1 = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter horse power of his car"));
+                double engineSize1 = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter engine size of his car"));
+                String make1 = JOptionPane.showInputDialog(null, "Enter make of his car");
+                Car hisCar = new Car(color1, horsePower1, engineSize1, make1);
+
+                String color2 = JOptionPane.showInputDialog(null, "Enter color of her car");
+                int horsePower2 = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter horse power of her car"));
+                double engineSize2 = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter engine size of her car"));
+                String make2 = JOptionPane.showInputDialog(null, "Enter make of her car");
+                Car herCar = new Car(color2, horsePower2, engineSize2, make2);
+                     
+                System.out.println(myCar);
+                System.out.println(hisCar);
+                System.out.println(herCar);
+
+                System.out.println("Number of car(s): " + Car.getCount());
+                System.out.println("Is my car the same as his car? " + myCar.equals(hisCar));
+                System.out.println("Is my car the same as her car? " + myCar.equals(herCar));
+                System.out.println("Is his car the same as her car? " + hisCar.equals(herCar));
+       }
+}
